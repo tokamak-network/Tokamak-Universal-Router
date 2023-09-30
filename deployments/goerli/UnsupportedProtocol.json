@@ -1,0 +1,51 @@
+{
+  "address": "0xfe10dc4f31563602894fd353f1d88b47bbfde989",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "UnsupportedProtocolError",
+      "type": "error"
+    },
+    {
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    }
+  ],
+  "transactionHash": "0xff5cf0645a3a8414b4422e99c9ad6abd1c899936a2f115e2bab64bbad021f76e",
+  "receipt": {
+    "to": null,
+    "from": "0xb68aa9e398c054da7ebaaa446292f611ca0cd52b",
+    "contractAddress": "0xfe10dc4f31563602894fd353f1d88b47bbfde989",
+    "transactionIndex": "0x12",
+    "gasUsed": "0x107f1",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xb2c041fc36b5e182131f41792e8f96ee9b1c29918d5f3eed793afadd9b010b12",
+    "transactionHash": "0xb1d886ed71b4bda896717e885ce3f5bf6b54b5fed38398b84cd5d53a215cc593",
+    "logs": [],
+    "blockNumber": "0x951fe0",
+    "cumulativeGasUsed": "0x921851",
+    "status": "0x1"
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "35b1c3e3262a688289dcf9aad1efe7a9",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"UnsupportedProtocolError\",\"type\":\"error\"},{\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"Dummy contract that always reverts\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Used as a placeholder to ensure reverts on attempted calls to protocols unsupported on a given chain\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/deploy/UnsupportedProtocol.sol\":\"UnsupportedProtocol\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[],\"viaIR\":true},\"sources\":{\"contracts/deploy/UnsupportedProtocol.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity ^0.8.17;\\n\\n/// @title Dummy contract that always reverts\\n/// @notice Used as a placeholder to ensure reverts on attempted calls to protocols unsupported on a given chain\\ncontract UnsupportedProtocol {\\n    error UnsupportedProtocolError();\\n\\n    fallback() external {\\n        revert UnsupportedProtocolError();\\n    }\\n}\\n\",\"keccak256\":\"0xe52eacb43bf0ce976999c9bb6b994317336ece52e33ed8691e797294d7ec8025\",\"license\":\"GPL-3.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x608080604052346013576043908160198239f35b600080fdfe60808060405234603157807fea3559ef0000000000000000000000000000000000000000000000000000000060049252fd5b600080fdfea164736f6c6343000811000a",
+  "deployedBytecode": "0x60808060405234603157807fea3559ef0000000000000000000000000000000000000000000000000000000060049252fd5b600080fdfea164736f6c6343000811000a",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "Dummy contract that always reverts",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "Used as a placeholder to ensure reverts on attempted calls to protocols unsupported on a given chain",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
