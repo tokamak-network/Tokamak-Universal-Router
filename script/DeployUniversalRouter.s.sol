@@ -14,7 +14,7 @@ abstract contract DeployUniversalRouter is Script {
     RouterParameters internal params;
     address internal unsupported;
 
-    address constant UNSUPPORTED_PROTOCOL = address(0);
+    address constant UNSUPPORTED_PROTOCOL = address(0x0e8020BF0cd65959E04880c858f5b0A5ed2A0Ed8); //address(0);
     bytes32 constant BYTES32_ZERO = bytes32(0);
 
     // set values for params and unsupported

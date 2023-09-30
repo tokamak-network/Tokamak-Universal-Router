@@ -14,4 +14,10 @@ quote_style = 'single'
 [profile.lite.optimizer_details.yulDetails]
 optimizerSteps = ''
 
+[rpc_endpoints]
+titan-goerli = "https://rpc.titan-goerli.tokamak.network"
+
+[etherscan]
+titan-goerli = { chain = 5050, key = "WM7SZ8W48JWGVZ7CA2QHJMM76SW45UPB38"}
+
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
