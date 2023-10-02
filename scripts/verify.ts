@@ -10,15 +10,15 @@ const main = async () => {
   try {
     await run('verify:verify', {
       address: data['Permit2'],
-      constructorArgsParams: [],
+      constructorArguments: [],
     })
     await run('verify:verify', {
       address: data['UnsupportedProtocol'],
-      constructorArgsParams: [],
+      constructorArguments: [],
     })
     await run('verify:verify', {
       address: data['UniversalRouter'],
-      constructorArgsParams: [
+      constructorArguments: [
         {
           permit2: data['Permit2'],
           weth9: '0x4200000000000000000000000000000000000006',
