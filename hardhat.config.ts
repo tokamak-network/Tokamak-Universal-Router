@@ -99,6 +99,10 @@ export default {
       url: `https://goerli.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: [`${process.env.PRIVATE_KEY}`],
     },
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: [`${process.env.PRIVATE_KEY}`],
+    },
     kovan: {
       url: `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`,
     },
@@ -143,6 +147,7 @@ export default {
     // apiKey: `${process.env.ETHERSCAN_API_KEY}`
     apiKey: {
       goerli: `${process.env.ETHERSCAN_API_KEY}`,
+      sepolia: `${process.env.ETHERSCAN_API_KEY}`,
       titangoerli: `${process.env.ETHERSCAN_API_KEY}`,
       titan: `${process.env.ETHERSCAN_API_KEY}`,
     },

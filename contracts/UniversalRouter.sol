@@ -23,7 +23,12 @@ contract UniversalRouter is IUniversalRouter, Dispatcher, RewardsCollector {
         )
         PaymentsImmutables(
             PaymentsParameters(
-                params.permit2, params.weth9, params.steth, params.wsteth, params.openseaConduit, params.sudoswap
+                params.permit2,
+                params.weth9,
+                params.steth,
+                params.wsteth,
+                params.openseaConduit,
+                params.sudoswap
             )
         )
         NFTImmutables(
@@ -46,11 +51,11 @@ contract UniversalRouter is IUniversalRouter, Dispatcher, RewardsCollector {
     {}
 
     /// @inheritdoc IUniversalRouter
-    function execute(bytes calldata commands, bytes[] calldata inputs, uint256 deadline)
-        external
-        payable
-        checkDeadline(deadline)
-    {
+    function execute(
+        bytes calldata commands,
+        bytes[] calldata inputs,
+        uint256 deadline
+    ) external payable checkDeadline(deadline) {
         execute(commands, inputs);
     }
 
@@ -62,7 +67,7 @@ contract UniversalRouter is IUniversalRouter, Dispatcher, RewardsCollector {
         if (inputs.length != numCommands) revert LengthMismatch();
 
         // loop through all given commands, execute them and pass along outputs as defined
-        for (uint256 commandIndex = 0; commandIndex < numCommands;) {
+        for (uint256 commandIndex = 0; commandIndex < numCommands; ) {
             bytes1 command = commands[commandIndex];
 
             bytes calldata input = inputs[commandIndex];
