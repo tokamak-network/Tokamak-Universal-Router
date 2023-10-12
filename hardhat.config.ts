@@ -85,6 +85,11 @@ export default {
       // gasPrice: 250000,
       // deploy: ['deploy_titan'],
     },
+    titangoerlinightly: {
+      url: 'https://rpc.titan-goerli-nightly.tokamak.network',
+      accounts: [`${process.env.PRIVATE_KEY}`],
+      chainId: 5051,
+    },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: [`${process.env.PRIVATE_KEY}`],
@@ -149,6 +154,7 @@ export default {
       goerli: `${process.env.ETHERSCAN_API_KEY}`,
       sepolia: `${process.env.ETHERSCAN_API_KEY}`,
       titangoerli: `${process.env.ETHERSCAN_API_KEY}`,
+      titangoerlinightly: `${process.env.ETHERSCAN_API_KEY}`,
       titan: `${process.env.ETHERSCAN_API_KEY}`,
     },
     customChains: [
@@ -168,6 +174,14 @@ export default {
           browserURL: 'https://explorer.titan.tokamak.network',
         },
       },
+      {
+        network: 'titangoerlinightly',
+        chainId: 5051,
+        urls: {
+          apiURL: 'https://explorer.titan-goerli-nightly.tokamak.network/api',
+          browserURL: 'https://explorer.titan-goerli-nightly.tokamak.network',
+        },
+      }
     ],
   },
   solidity: {
