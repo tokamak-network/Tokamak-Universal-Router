@@ -47,7 +47,7 @@ export default {
   namedAccounts: {
     deployer: {
       default: 0, // here this will by default take the first account as deployer
-      31337: `0xB68AA9E398c054da7EBAaA446292f611CA0CD52B`, // similarly on mainnet it will take the first account as deployer. Note though that depending on how hardhat network are configured, the account 0 on one network can be different than on another
+      31337: `0x2d45Af0a92a0AC16eD063956d965295a6457461f`, // similarly on mainnet it will take the first account as deployer. Note though that depending on how hardhat network are configured, the account 0 on one network can be different than on another
     },
   },
   paths: {
@@ -64,12 +64,15 @@ export default {
       forking: {
         url: `https://rpc.titan-goerli.tokamak.network`,
       },
+      chainID: 31337,
     },
     localhost: {
       forking: {
         url: `https://rpc.titan-goerli.tokamak.network`,
       },
+      chainID: 31337,
       accounts: [`${process.env.PRIVATE_KEY}`],
+      deploy: ['deploy_titan'],
     },
     titangoerli: {
       url: 'https://rpc.titan-goerli.tokamak.network',
@@ -83,7 +86,7 @@ export default {
       accounts: [`${process.env.PRIVATE_KEY}`],
       chainId: 55004,
       // gasPrice: 250000,
-      // deploy: ['deploy_titan'],
+      deploy: ['deploy_titan'],
     },
     titangoerlinightly: {
       url: 'https://rpc.titan-goerli-nightly.tokamak.network',

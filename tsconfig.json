@@ -12,6 +12,6 @@
     "typeRoots": ["./typechain", "./node_modules/@types"],
     "types": ["@nomiclabs/hardhat-ethers"]
   },
-  "include": ["./test", "./deploy"],
+  "include": ["./test", "./deploy", "./scripts"],
   "files": ["./hardhat.config.ts"]
 }
