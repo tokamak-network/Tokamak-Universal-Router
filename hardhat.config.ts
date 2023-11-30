@@ -88,6 +88,13 @@ export default {
       // gasPrice: 250000,
       deploy: ['deploy_titan'],
     },
+    holesky: {
+      url: `https://ethereum-holesky.publicnode.com`,
+      accounts: [`${process.env.PRIVATE_KEY}`],
+      chainId: 17000,
+      // gasMultiplier: 1.25,
+      // gasPrice: 10000000000,
+    },
     titangoerlinightly: {
       url: 'https://rpc.titan-goerli-nightly.tokamak.network',
       accounts: [`${process.env.PRIVATE_KEY}`],
@@ -154,37 +161,46 @@ export default {
     // Obtain one at https://etherscan.io/
     // apiKey: `${process.env.ETHERSCAN_API_KEY}`
     apiKey: {
-      goerli: `${process.env.ETHERSCAN_API_KEY}`,
-      sepolia: `${process.env.ETHERSCAN_API_KEY}`,
-      titangoerli: `${process.env.ETHERSCAN_API_KEY}`,
-      titangoerlinightly: `${process.env.ETHERSCAN_API_KEY}`,
-      titan: `${process.env.ETHERSCAN_API_KEY}`,
+      // goerli: `${process.env.ETHERSCAN_API_KEY}`,
+      // sepolia: `${process.env.ETHERSCAN_API_KEY}`,
+      // titangoerli: `${process.env.ETHERSCAN_API_KEY}`,
+      // titangoerlinightly: `${process.env.ETHERSCAN_API_KEY}`,
+      // titan: `${process.env.ETHERSCAN_API_KEY}`,
+      holesky: `${process.env.ETHERSCAN_API_KEY}`,
     },
     customChains: [
+      // {
+      //   network: 'titangoerli',
+      //   chainId: 5050,
+      //   urls: {
+      //     apiURL: 'https://explorer.titan-goerli.tokamak.network/api',
+      //     browserURL: 'https://explorer.titan-goerli.tokamak.network',
+      //   },
+      // },
+      // {
+      //   network: 'titan',
+      //   chainId: 55004,
+      //   urls: {
+      //     apiURL: 'https://explorer.titan.tokamak.network/api',
+      //     browserURL: 'https://explorer.titan.tokamak.network',
+      //   },
+      // },
+      // {
+      //   network: 'titangoerlinightly',
+      //   chainId: 5051,
+      //   urls: {
+      //     apiURL: 'https://explorer.titan-goerli-nightly.tokamak.network/api',
+      //     browserURL: 'https://explorer.titan-goerli-nightly.tokamak.network',
+      //   },
+      // },
       {
-        network: 'titangoerli',
-        chainId: 5050,
+        network: 'holesky',
+        chainId: 17000,
         urls: {
-          apiURL: 'https://explorer.titan-goerli.tokamak.network/api',
-          browserURL: 'https://explorer.titan-goerli.tokamak.network',
+          apiURL: 'https://api-holesky.etherscan.io/api',
+          browserURL: 'https://holesky.etherscan.io/',
         },
       },
-      {
-        network: 'titan',
-        chainId: 55004,
-        urls: {
-          apiURL: 'https://explorer.titan.tokamak.network/api',
-          browserURL: 'https://explorer.titan.tokamak.network',
-        },
-      },
-      {
-        network: 'titangoerlinightly',
-        chainId: 5051,
-        urls: {
-          apiURL: 'https://explorer.titan-goerli-nightly.tokamak.network/api',
-          browserURL: 'https://explorer.titan-goerli-nightly.tokamak.network',
-        },
-      }
     ],
   },
   solidity: {
