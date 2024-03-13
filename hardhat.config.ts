@@ -1,7 +1,8 @@
-import 'hardhat-typechain'
-import '@nomiclabs/hardhat-ethers'
 import '@nomicfoundation/hardhat-chai-matchers'
+import '@nomiclabs/hardhat-ethers'
+import '@nomiclabs/hardhat-etherscan'
 import dotenv from 'dotenv'
+import 'hardhat-typechain'
 dotenv.config()
 
 const DEFAULT_COMPILER_SETTINGS = {
@@ -31,6 +32,11 @@ export default {
         url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
         blockNumber: 15360000,
       },
+    },
+    thanossepolia: {
+      url: `https://rpc.thanos-sepolia-test.tokamak.network`,
+      accounts: [`${process.env.PRIVATE_KEY}`],
+      chainId: 111551118080,
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -68,6 +74,21 @@ export default {
     baseGoerli: {
       url: `https://goerli.base.org`,
     },
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: process.env.ETHERSCAN_API_KEY,
+    customChains: [
+      {
+        network: 'thanossepolia',
+        chainId: 111551118080,
+        urls: {
+          apiURL: 'https://explorer.thanos-sepolia-test.tokamak.network/api',
+          browserURL: 'https://explorer.thanos-sepolia-test.tokamak.network/',
+        },
+      },
+    ],
   },
   namedAccounts: {
     deployer: 0,
