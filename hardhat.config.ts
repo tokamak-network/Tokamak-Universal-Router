@@ -38,8 +38,8 @@ export default {
       chainId: 111551119090,
     },
     thanossepolianightly:{
-	    url: 'https://rpc.thanos-sepolia-nightly.tokamak.network',
-	    chainId: 111551118282,
+      url: 'https://rpc.thanos-sepolia-nightly.tokamak.network',
+      chainId: 111551118282,
     },
     titansepolia:{
       url: `https://rpc.titan-sepolia.tokamak.network`,
