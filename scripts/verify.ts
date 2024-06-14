@@ -21,11 +21,7 @@ let data = JSON.parse(fs.readFileSync(`../state.${chainName}.json`).toString())
 const main = async () => {
   console.log('Verifying contract...')
   try {
-    await run('verify:verify', {
-      address: data['permit2Address'],
-      constructorArguments: [],
-    })
-    await run('verify:verify', {
+      await run('verify:verify', {
       address: data['unsupportedAddress'],
       constructorArguments: [],
     })
